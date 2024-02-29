@@ -1,9 +1,9 @@
 
-### Cấu hình cơ bản Eslint + Prettier + Husky + Lint Staged + Commit Lint để bắt đầu dự án</h1>
+# Cấu hình cơ bản Eslint + Prettier + Husky + Lint Staged + Commit Lint để bắt đầu dự án</h1>
 
 ## I. Cấu hình Eslint
 
-# 1. Cài đặt:
+### 1. Cài đặt:
 
 ```bash
 yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier @typescript-eslint eslint-plugin
@@ -11,7 +11,7 @@ yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier @typescrip
 ```eslint-plugin-prettier```: Plugin dùng để chạy Prettier dưới dạng các quy tắc (rule) của ESLint.
 ```eslint-config-prettier```: Để tránh conflict Eslint với Prettier, plugin này giúp tắt tất cả các quy tắc không cần thiết hoặc có thể xung đột.
 
-# 2. Cấu hình mở rộng cho file ```.eslintrc.json```, ví dụ:
+### 2. Cấu hình mở rộng cho file ```.eslintrc.json```, ví dụ:
 ```json
 {
   "extends": [
@@ -70,7 +70,7 @@ yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier @typescrip
 
 ## II. Cài đặt Husky
 
-# 1. Cài đặt:
+### 1. Cài đặt:
 
 ```bash
 yarn add --dev husky
@@ -96,12 +96,12 @@ Sau khi install husky sẽ tạo ra folder ```.husky```.
 
 ## III. Cài đặt Lint Staged
 
-# 1. Cài đặt:
+### 1. Cài đặt:
 
 ```bash
 yarn add --dev lint-staged
 ```
-# 2. Tạo file ```.lintstagedrc.js``` trong thư mục gốc để setup các nhiệm vụ, ví dụ:
+### 2. Tạo file ```.lintstagedrc.js``` trong thư mục gốc để setup các nhiệm vụ, ví dụ:
 ```js
 const path = require('path')
 
@@ -115,7 +115,7 @@ module.exports = {
 }
 ```
 
-# 1. Trong folder ```.husky``` tạo file ```pre-commit``` để cài đặt chạy lint-staged.
+### 3. Trong folder ```.husky``` tạo file ```pre-commit``` để cài đặt chạy lint-staged.
 ```
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
@@ -125,15 +125,17 @@ yarn lint-staged
 
 ## IV. Cài đặt Commit Lint
 
-# 1. Cài đặt
+### 1. Cài đặt
 ```bash
 yarn add --dev @commitlint/config-conventional @commitlint/cli
 ```
-# 2. Tạo file ```.commitlintrc.js``` ngoài thư mục gốc để cấu hình các quy ước:
+
+### 2. Tạo file ```.commitlintrc.js``` ngoài thư mục gốc để cấu hình các quy ước:
 ```js
 module.exports = { extends: ['@commitlint/config-conventional'] };
 ```
-# 3. Trong folder ```.husky``` tạo file ```commit-msg``` để cài đặt chạy commitlint:
+
+### 3. Trong folder ```.husky``` tạo file ```commit-msg``` để cài đặt chạy commitlint:
 ```
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
@@ -141,7 +143,7 @@ module.exports = { extends: ['@commitlint/config-conventional'] };
 npx --no-install commitlint --edit "$1"
 ```
 
-# 4. Commit sẽ theo quy ước: \<type>: \<subject>
+### 4. Commit sẽ theo quy ước: \<type>: \<subject>
 
 **Type** sẽ theo các định nghĩa bên dưới:
 
