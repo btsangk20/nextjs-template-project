@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn lint-fix && next dev -p 3009",
-    "start": "yarn lint-fix && next start -p 3009",
+    "dev": "yarn lint-fix && next dev -p 3000",
+    "start": "yarn lint-fix && next start -p 3000",
     "build": "yarn lint-fix && next build",
     "build:stag": "yarn lint-fix && next build",
     "build:prod": "yarn lint-fix && next build",
