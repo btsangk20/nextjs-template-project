@@ -6,7 +6,7 @@
 ### 1. Cài đặt:
 
 ```bash
-yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier @typescript-eslint eslint-plugin
+yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier @typescript-eslint/eslint-plugin
 ```
 ```eslint-plugin-prettier```: Plugin dùng để chạy Prettier dưới dạng các quy tắc (rule) của ESLint.
 ```eslint-config-prettier```: Để tránh conflict Eslint với Prettier, plugin này giúp tắt tất cả các quy tắc không cần thiết hoặc có thể xung đột.
