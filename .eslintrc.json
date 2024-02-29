@@ -1,3 +1,52 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "react/prop-types": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "eol-last": ["error", "always"],
+    // "quotes": ["error", "prefer-single"],
+    // "jsx-quotes": ["error", "prefer-single"],
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "semi": ["error", "never"],
+    "max-lines": ["error", 500],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-process-env": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off",
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowLiteral": false,
+        "allowObject": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "semi": false,
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        // "no-unused-vars": ["warn"],
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "endOfLine": "auto",
+        "trailingComma": "all"
+      }
+    ]
+  },
+  "ignorePatterns": ["vfs_fonts.ts"]
 }
